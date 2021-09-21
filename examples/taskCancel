@@ -1,0 +1,19 @@
+
+# 
+# Usage:
+# 
+# 1. Update 'baseUrl' (below)
+# 
+# 2. Call this script
+# 
+#         taskCancel <task_id>
+# 
+
+# HBP Openshift
+baseUrl='https://tes.okd.hbp.eu'
+# Minishift (locally)
+# baseUrl='http://192.168.99.100:31934 --insecure'
+
+taskID="$1"
+
+curl -X POST "$baseUrl/v1/tasks/${taskID}:cancel"

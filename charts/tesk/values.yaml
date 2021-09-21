@@ -3,15 +3,18 @@
 # Declare variables to be passed into your templates.
 
 # host_name: tes.tsi.ebi.ac.uk
-host_name: ""
+host_name: tes.okd.hbp.eu
 # There are two options here: "openshift" or "kubernetes"
-clusterType: kubernetes
+clusterType: openshift
 #
 #
 #
 
 # 'openstack' or 's3'
 storage: none
+
+# Configurable storage class. 
+storageClass: managed-nfs-storage
 
 tesk:
     # if empty - default base path; currently /ga4gh/tes/v1
@@ -20,22 +23,24 @@ tesk:
     tes_api_base_path: /v1
     image: eu.gcr.io/tes-wes/tesk-api:v1.1
     port: 8080
+    taskmaster_image_name: docker-registry.ebrains.eu/tesk/taskmaster
     taskmaster_image_version: v0.10.0
+    taskmaster_filer_image_name: docker-registry.ebrains.eu/tesk/filer
     taskmaster_filer_image_version: v0.10.0
-    debug: false
+    debug: true
     executor_retries: 2
     filer_retries: 2
 
 transfer:
     # If you want local file systems support (i.e. 'file:' urls in inputs and outputs),
     # you have to define these 2 properties.
-    active: false
+    active: true
 
     # wes_base_path: '/data'      # WesElixir via docker-compose
     wes_base_path: '/tmp'         # WesElixir locally
                                   # Change the value of $wesBasePath in minikubeStart accordingly
     tes_base_path: '/transfer'
-    pvc_name: 'transfer-pvc'
+    pvc_name: 'tesk-pvc'
 
 auth:
     # the following variables are specific to each deployment

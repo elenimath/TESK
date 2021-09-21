@@ -1,0 +1,18 @@
+{
+  "description": "Demonstrates handling single http file input. Will output some nice looking JSON to stdout.",
+  "inputs": [
+    {
+      "url": "file:///home/eleni/Desktop/hbp/TESK/TESK/examples/success/hello.json",
+      "path": "/tes/hello.json",
+      "type": "FILE"
+    }
+  ],
+  "executors": [
+    {
+      "image": "docker-registry.ebrains.eu/cwl-workflows/psd_workflow_fetching_data",
+      "command": [
+        "ls"
+      ]
+    }
+  ]
+}

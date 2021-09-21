@@ -1,5 +1,4 @@
 
-
 # 
 # Usage:
 # 
@@ -24,7 +23,10 @@
 # | kube-system | kubernetes-dashboard | No node port                |
 # |-------------|----------------------|-----------------------------|
 
-baseUrl='http://192.168.99.100:31209'
+# HBP Openshift
+baseUrl='https://tes.okd.hbp.eu'
+# Minishift (locally)
+# baseUrl='http://192.168.99.100:31934 --insecure'
 
 jsonFile="$1"
 
@@ -35,4 +37,3 @@ curl -iv                                    \
 --header 'Accept: application/json'         \
 -d "@${jsonFile}"                           \
 "$baseUrl/v1/tasks"
-

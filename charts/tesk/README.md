@@ -61,9 +61,12 @@ See [`values.yaml`](values.yaml) for default values.
 | host_name | string | FQDN to expose the application |
 | clusterType | string |type of Kubernetes cluster; either 'kubernetes' or 'openshift'|
 | storage | string | Can be either 'openstack' or 's3' |
+| storageClass | string | Name of a user preferred storage class (default is empty) |
 | tesk.image | string | container image (including the version) to be used to run TESK API |
 | tesk.port | integer | |
+| tesk.taskmaster_image_name | string | the name of the image to be used to run TESK Taskmaster Job |
 | tesk.taskmaster_image_version | string | the version of the image to be used to run TESK Taskmaster Job |
+| tesk.taskmaster_filer_image_name | string | the name of the image to be used to run TESK Filer Job |
 | tesk.taskmaster_filer_image_version | string | the version of the image to be used to run TESK Filer Job |
 | tesk.executor_retries| int | The number of retries on error - actual task compute (executor)|
 | tesk.filer_retries| int | The number of retries on error while handling I/O (filer)|
