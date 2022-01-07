@@ -24,7 +24,7 @@
 # |-------------|----------------------|-----------------------------|
 
 # HBP Openshift
-baseUrl='https://tes.okd.hbp.eu'
+baseUrl='https://tes.okd-dev.hbp.eu'
 # Minishift (locally)
 # baseUrl='http://192.168.99.100:31934 --insecure'
 
@@ -35,5 +35,6 @@ curl -iv                                    \
 -s                                          \
 --header 'Content-Type: application/json'   \
 --header 'Accept: application/json'         \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJfNkZVSHFaSDNIRmVhS0pEZDhXcUx6LWFlZ3kzYXFodVNJZ1RXaTA1U2k0In0.eyJleHAiOjE2NDA0Mzk5MTYsImlhdCI6MTYzOTgzNTExNiwiYXV0aF90aW1lIjoxNjM5ODM1MTAxLCJqdGkiOiIxMzYyZGFkZC03ZDU4LTRiMDYtYWY0Ny1hZjEwY2M5OTM0MWQiLCJpc3MiOiJodHRwczovL2lhbS5lYnJhaW5zLmV1L2F1dGgvcmVhbG1zL2hicCIsImF1ZCI6WyJpbWdfc3ZjIiwianVweXRlcmh1Yi1qc2MiLCJ4d2lraSIsInRlYW0iLCJwbHVzIiwiZ3JvdXAiXSwic3ViIjoiMjMxYzgzMDUtMzFkMy00OTkwLTk3ZDYtZGMxYzVhNWUxYmQ1IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoianVweXRlcmh1YiIsInNlc3Npb25fc3RhdGUiOiI2YThmNmY5NC1iMWI3LTRmZjctYjY2NS0zNGYxNDA2YzIyOGUiLCJhY3IiOiIwIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vanVweXRlcmh1Yi5hcHBzLmpzYy5oYnAuZXUvIiwiaHR0cHM6Ly9sYWIuZWJyYWlucy5ldS8iLCJodHRwczovL2xhYi5qc2MuZWJyYWlucy5ldS8iXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIl19LCJzY29wZSI6InByb2ZpbGUgY29sbGFiLmRyaXZlIG9mZmxpbmVfYWNjZXNzIGNsYi53aWtpLndyaXRlIGNsYi53aWtpLnJlYWQgdGVhbSBxdW90YSBjbGIuZHJpdmU6d3JpdGUgcm9sZXMgZW1haWwgb3BlbmlkIGNsYi5kcml2ZTpyZWFkIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJFbGVuaSBNYXRoaW91bGFraSIsIm1pdHJlaWQtc3ViIjoiMzEwOTEzIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZWxtYXRoIiwiZ2l2ZW5fbmFtZSI6IkVsZW5pIiwiZmFtaWx5X25hbWUiOiJNYXRoaW91bGFraSIsImVtYWlsIjoiZW1hdGhpb3VsYWtpQGF0aGVuYXJjLmdyIn0.Pzz2UszqbklfBzAgZmYQnGHmfy8FCj4ebX0KHGVgxxyLbrhmZMyy3mFob8i1csy8dSVuVQB4VYCzCJAJELIW6wNmihMA5u5WHWPaz0BBGtX_-KW0Y6WBNPxkuUCQB7zTVTkEuS-_3bm1ucfzKFUFhD1paCWeuCgrlQiRnxTNvpIQTilxN6FM4OY9j1CzxXUMTWQJ3TY67qYu9SGLJBB_nlLC-IBvFUH8eJxx9ZZCRNyGE77-hbnn9TUlccUoWzxOJLR_VgMlgfsG8TL2BbJ6Y563wsQdM9FUlTAdelp7RSCNbbb4SNecf4CdhJR_vvzgeSQ2XKTFPshJvV3LGU-jNA'	\
 -d "@${jsonFile}"                           \
 "$baseUrl/v1/tasks"

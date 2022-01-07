@@ -1,0 +1,19 @@
+{
+  "description": "Demonstrates handling single http file input. Will output some nice looking JSON to stdout.",
+  "inputs": [
+    {
+      "url": "s3://tesk_storage_container/hello.json",
+      "path": "/tes/volumes/input",
+      "type": "FILE"
+    }
+  ],
+  "executors": [
+    {
+      "image": "alpine",
+      "command": [
+        "cat",
+        "/tes/volumes/input"
+      ]
+    }
+  ]
+}

@@ -16,6 +16,7 @@ spec:
       containers:
       - name: tesk-api
         image: {{ .Values.tesk.image }}
+        imagePullPolicy: Always
         env:
         - name: TESK_API_TASKMASTER_IMAGE_NAME
           value: {{ .Values.tesk.taskmaster_image_name }}

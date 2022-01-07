@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 # host_name: tes.tsi.ebi.ac.uk
-host_name: tes.okd-dev.hbp.eu
+host_name: tes.okd.hbp.eu
 # There are two options here: "openshift" or "kubernetes"
 clusterType: openshift
 #
@@ -21,7 +21,7 @@ tesk:
     #tes_api_base_path:
     # For backwards compatibility with TES 0.3 - old base bath
     tes_api_base_path: /v1
-    image: docker-registry.ebrains.eu/tc/tesk/tesk-api:v1.1
+    image: eu.gcr.io/tes-wes/tesk-api:v1.1
     port: 8080
     taskmaster_image_name: docker-registry.ebrains.eu/tc/tesk/taskmaster
     taskmaster_image_version: v0.10.0
@@ -45,12 +45,10 @@ transfer:
 auth:
     # the following variables are specific to each deployment
     # mode: auth/noauth
-    mode: auth
+    mode: noauth
     # EBI/CSC
-    env_subgroup: "ENV_SUBGROUP"
-    env_basegroup: "PARENT_GROUP:ENV_SUBGROUP"
-    client_id: none
-    client_secret: none
+    env_subgroup: CSC
+    env_basegroup: ECP_CLN
 
 service:
     # the following variables are specific to each deployment
